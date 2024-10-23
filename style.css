@@ -1,0 +1,159 @@
+/* Global styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Rubik', sans-serif;
+    color: #432000;
+    user-select: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #000000;  /* Dark mode background */
+    color: #ffffff;  /* White text for contrast */
+}
+
+body.dark-mode .background {
+    background-color: #000000;  /* Ensure the background div also turns black */
+}
+
+/* Container and layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin: 30px auto;
+}
+
+/* Image styles */
+img {
+    width: 150px;
+    margin: 0 auto;
+}
+
+/* Input field styling */
+input {
+    background-color: #DCE1EB;
+    padding: 15px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #432000;
+    text-align: center;
+    margin: 10px 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Button styling */
+button {
+    background-color: rgb(121, 38, 198);
+    padding: 15px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #FDFDFD;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 12px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #432000;
+    cursor: pointer;
+}
+
+
+body.dark-mode button:hover {
+    background-color: #d38b8b;  /* Button hover color in dark mode */
+}
+
+body.dark-mode .background{
+    background-color: #000000;
+}
+
+body.dark-mode button{
+    background: linear-gradient(180deg, #888888, #666666);
+    color: #FDFDFD;
+}
+
+body.dark-mode button:hover {
+    background: linear-gradient(180deg, #666666, #444444); /* Darker gradient for hover effect */
+}
+/* Shopping list */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+ul li {
+    background-color: #FFFDF8;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+ul li:hover {
+    background-color: #FFECC7;
+    cursor: pointer;
+}
+
+/* Dark mode toggle switch styling */
+label {
+    width: 150px;
+    height: 20px;
+    position: relative;
+    display: block;
+    border-radius: 400px;
+    background: #ffffff;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 20px;
+    border: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+label::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transition: 0.3s;
+    top: 4px;
+    left: 3px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 65px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hidden checkbox */
+#darkmode-toggle {
+    width: 145px;
+    height: 24px;
+    visibility: hidden;
+}
+
+/* Dark mode toggle styles when checked */
+#darkmode-toggle:checked + label {
+    background: #363535;
+}
+
+#darkmode-toggle:checked + label::after {
+    left: 129px;
+    margin-top: 1px;
+    transform: translateX(-1%);
+    background: linear-gradient(180deg, #000000, #000000);
+}
+
+label:active::after {
+    width: 95px;
+}
